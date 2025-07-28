@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="todo-container">
+    <h1><center>My To-Do List</center></h1>
+    <div class="input-section">
+      <label>Task:</label>
+      <input type="text" id="task-input" placeholder="Enter a new task..." />
+      <label for="task-deadline">Deadline:</label>
+<input type="datetime-local" id="task-deadline" />
+
+  <label>Priority:</label><select id="priority">
+  <option value="high" class="high-option">High</option>
+  <option value="normal" class="normal-option">Normal</option>
+  <option value="low" class="low-option">Low</option>
+</select>
+
+<div class="button-wrapper">
+    <button onclick="addTask()">Add</button>
+  </div>
+    </div>
+    <ul id="task-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

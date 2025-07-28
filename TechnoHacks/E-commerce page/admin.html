@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - ShopZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+<section class="admin-action">
+  <label for="admin-action"><strong>Select Action:</strong></label>
+  <select id="admin-action">
+    <option value="add">Add Product</option>
+    <option value="delete">Delete Product</option>
+  </select>
+</section>
+
+
+
+  <section id="add-section">
+    <h2>Add New Product</h2>
+    <form id="add-product-form">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" required />
+
+      <label for="productPrice">Price (₹):</label>
+      <input type="number" id="productPrice" required />
+
+      <label for="productImage">Image URL:</label>
+      <input type="text" id="productImage" required />
+
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <section id="delete-section" style="display: none;">
+    <h2>Delete Product</h2>
+    <ul id="product-list"></ul>
+  </section>
+
+  <script src="admin.js"></script>
+  <script>
+    // JS to toggle between sections
+    const actionSelect = document.getElementById('admin-action');
+    const addSection = document.getElementById('add-section');
+    const deleteSection = document.getElementById('delete-section');
+
+    actionSelect.addEventListener('change', () => {
+      if (actionSelect.value === 'add') {
+        addSection.style.display = 'block';
+        deleteSection.style.display = 'none';
+      } else {
+        addSection.style.display = 'none';
+        deleteSection.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

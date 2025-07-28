@@ -1,0 +1,225 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 2.5;
+}
+
+/* Header */
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section Titles */
+section h2 {
+  margin: 20px 0 15px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+/* Admin Action Dropdown Inline */
+.admin-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+}
+
+/* Label inside .admin-action */
+.admin-action label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Dropdown (Admin Action Selector) */
+#admin-action {
+  width: 250px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: border-color 0.3s;
+}
+
+
+#admin-action:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Forms (Add Product) */
+form {
+  background: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 500;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Delete Section */
+#delete-section {
+  background-color: white;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#delete-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+#delete-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+}
+
+#delete-section button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#delete-section button:hover {
+  background-color: #c82333;
+}
+
+/* Product List (on Home Page) */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 40px 30px;
+  justify-content: start;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.price {
+  font-size: 2.1rem;
+  color: #28a745;
+  margin-bottom: 5px;
+}
+
+.buy-btn {
+  background-color: #433b3d;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buy-btn:hover {
+  background-color: #77899c;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
